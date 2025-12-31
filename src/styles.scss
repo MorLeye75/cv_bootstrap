@@ -1,1 +1,230 @@
 /* You can add global styles to this file, and also import other style files */
+// Variables de couleurs
+$color-dark: #3D3A35;
+$color-light: #E2E7FA;
+$color-border-dark: #1a3a52;
+$color-border-light: #b8d4e8;
+
+// Font Sensation (simulation)
+@font-face {
+  font-family: 'Sensation';
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+// CLASSES COULEURS
+.lightZone {
+  background-color: $color-light;
+  color: $color-dark;
+}
+
+.darkZone {
+  background-color: $color-dark;
+  color: $color-light;
+}
+
+// Container avec bordure
+.container,
+.container-fluid {
+  border: 2px solid $color-border-dark;
+}
+
+// Règles H1
+.lightZone h1 {
+  border-bottom: 2px solid $color-border-dark;
+  font-size: 38px;
+}
+
+.darkZone h1 {
+  border-bottom: 2px solid $color-border-light;
+  font-size: 38px;
+}
+
+.lightZone section section h1 {
+  border-bottom: none;
+  font-size: 20px;
+}
+
+// Font Sensation pour les span dans header
+header span {
+  font-size: 38px;
+  font-family: 'Sensation', Arial, sans-serif;
+}
+
+// Styles généraux
+.name-section {
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+
+  span:first-child {
+    font-weight: 300;
+    margin-right: 5px;
+  }
+
+  span:last-child {
+    font-weight: 700;
+  }
+}
+
+.photo-section {
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border: 2px solid $color-border-dark;
+  }
+}
+
+.about-section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+}
+
+// Section sombre
+#darkSection {
+  padding: 0;
+
+  section {
+    padding: 20px;
+
+    h1 {
+      font-weight: bold;
+      margin-bottom: 12px;
+      padding-bottom: 5px;
+    }
+
+    p {
+      font-size: 0.85rem;
+      margin: 5px 0;
+      line-height: 1.4;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+
+    li {
+      font-size: 0.85rem;
+      margin: 5px 0;
+      padding-left: 15px;
+      position: relative;
+
+      &:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+}
+
+// Section claire
+#lightSection {
+  padding: 25px;
+
+  > section {
+    margin-bottom: 30px;
+
+    > h1 {
+      font-weight: bold;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+    }
+  }
+
+  section section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 3px solid $color-border-dark;
+
+    h1 {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 0.8rem;
+      margin: 3px 0;
+    }
+  }
+
+  ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    font-size: 0.8rem;
+
+    li {
+      margin: 4px 0;
+      line-height: 1.4;
+    }
+  }
+}
+
+// MOBILE FIRST
+.competence-section,
+.langues-section,
+#lightSection {
+  display: none;
+}
+
+.photo-section {
+  display: block;
+}
+
+header,
+main {
+  display: block;
+}
+
+// RESPONSIVE - ÉCRANS MOYENS (md - 768px et plus)
+@media (min-width: 768px) {
+  .photo-section,
+  .competence-section,
+  .langues-section,
+  #lightSection {
+    display: block;
+  }
+
+  #darkSection .row-sections > section {
+    padding: 20px;
+  }
+}
+
+// RESPONSIVE - GRANDS ÉCRANS (lg - 992px et plus)
+@media (min-width: 992px) {
+  // Bootstrap gère avec les classes col-lg
+}
