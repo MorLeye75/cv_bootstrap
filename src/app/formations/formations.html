@@ -1,0 +1,9 @@
+<section>
+  <h1>Formations</h1>
+  
+  <section *ngFor="let formation of formations">
+    <h2>{{ formation.titre }} - {{ formation.annee }}</h2>
+    <p><strong>Établissement :</strong> {{ formation.etablissement }}</p>
+    <p><strong>Description :</strong> {{ formation.description }}</p>
+  </section>
+</section>

@@ -1,0 +1,11 @@
+<section>
+  <h1>Expériences</h1>
+
+  <section *ngFor="let exp of experiences">
+    <h2><strong>{{ exp.poste }}</strong> - {{ exp.periode }}</h2>
+    <p><strong>{{ exp.entreprise }}</strong>, {{ exp.lieu }}</p>
+    <ul>
+      <li *ngFor="let tache of exp.taches">{{ tache }}</li>
+    </ul>
+  </section>
+</section>

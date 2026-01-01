@@ -1,110 +1,23 @@
 <!-- CONTAINER -->
 <div class="container-fluid cv-container">
-  <!-- HEADER -->
-  <header class="row">
-    <!-- Nom - Auto sur MD, Auto sur LG -->
-    <div class="name-section col-12 col-md col-lg-auto">
-      <span>Absa</span>
-      <span>NDIAYE</span>
-    </div>
-    <!-- Photo - Auto sur MD, 3 colonnes sur LG, ordre last sur LG -->
-    <div class="photo-section col-12 col-md-auto col-lg-3 order-lg-last">
-      <img src="./assets/cv.png" alt="photo">
-    </div>
-    <!-- À propos -->
-    <section class="about-section col-12 col-lg">
-      <h1>A propos de nous</h1>
-      <p>
-        Decrivez en quelques lignes vos compétences clés pour le poste et vos objectifs de carrière. Vous
-        pouvez les mettre en forme a l'aide de puces ou les laisser sous forme de texte plein. Cet espace
-        peut servir de debut d'introduction a votre lettre de motivation. Soyez precis, imaginatif et mettez
-        en valeur votre potentiel professionnel.
-      </p>
-    </section>
-  </header>
+  <!-- HEADER via composant -->
+  <entete-cv></entete-cv>
 
   <!-- MAIN -->
   <main class="row">
-    <!-- Section sombre - 12 colonnes sur XS/SM/MD/XL, 3 colonnes sur LG, ordre last sur LG -->
+    <!-- Section sombre -->
     <div id="darkSection" class="darkZone col-12 col-lg-3 order-lg-last">
-      <!-- Row pour organiser les sections en colonnes sur MD et LG -->
       <div class="row row-sections">
-        <!-- Contact - 12 colonnes sur XS/SM/XL, colonnes égales sur MD/LG -->
-        <section class="col-12 col-md col-lg-12">
-          <h1>Contact</h1>
-          <p>77 100 20 30 / 76 100 20 30</p>
-          <p>absa@emploidakar.com </p>
-          <p>Rue Kaolack, Point E, Dakar</p>
-        </section>
-
-        <!-- Compétence - 12 colonnes sur XS/SM/XL, colonnes égales sur MD/LG -->
-        <section class="competence-section col-12 col-md col-lg-12">
-          <h1>Compétence</h1>
-          <ul>
-            <li>Bonne élocution</li>
-            <li>Rythme verbal, ton</li>
-            <li>Maitrise des outils de bureautique</li>
-            <li>Respect du timing</li>
-          </ul>
-        </section>
-
-        <!-- Langues - 12 colonnes sur XS/SM/XL, colonnes égales sur MD/LG -->
-        <section class="langues-section col-12 col-md col-lg-12">
-          <h1>Langues</h1>
-          <ul>
-            <li>Français</li>
-            <li>Anglais</li>
-            <li>Pulaar</li>
-          </ul>
-        </section>
+        <app-contact></app-contact>
+        <app-competences></app-competences>
+        <app-langues></app-langues>
       </div>
     </div>
 
-    <!-- Section claire - 12 colonnes sur XS/SM/MD/XL, 9 colonnes sur LG -->
+    <!-- Section claire -->
     <div id="lightSection" class="col-12 col-lg-9">
-      <!-- Expériences -->
-      <section>
-        <h1>Experiences</h1>
-        <section>
-          <h1><strong>Téléconseillère</strong> - Mars 2018 - Présent</h1>
-          <p><strong>Majorel</strong>, Dakar</p>
-          <ul>
-            <li>Conseiller et assister les clients au téléphone.</li>
-            <li>Répondre aux demandes clients et les accompagner jusqu'à la résolution de leur
-              problème.</li>
-            <li>Gérer les fichiers et les comptes des clients</li>
-            <li>Réaliser des enquêtes au téléphone, faire de la prospection ou la prise de
-              rendez-vous.</li>
-            <li>Proposer de nouveaux services ou offres aux clients pour les fidéliser.</li>
-          </ul>
-        </section>
-        <section>
-          <h1><strong>Téléconseillère</strong> - Janvier 2017 - Février 2018 </h1>
-          <p><strong>Sitel Group</strong>, Dakar</p>
-          <ul>
-            <li>Conseiller et assister les clients au téléphone.</li>
-            <li>Répondre aux demandes clients et les accompagner jusqu'à la résolution de leur problème.</li>
-            <li>Gérer les fichiers et les comptes des clients</li>
-            <li>Réaliser des enquêtes au téléphone, faire de la prospection ou la prise de rendez-vous.</li>
-            <li>Proposer de nouveaux services ou offres aux clients pour les fidéliser.</li>
-          </ul>
-        </section>
-      </section>
-
-      <!-- Formations -->
-      <section>
-        <h1>Formations</h1>
-        <section>
-          <h1>Licence en Marketing et Communication 2017</h1>
-          <p>Université Cheikh Anta Diop de Dakar</p>
-          <p>Décrivez cette formation en une ligne</p>
-        </section>
-        <section>
-          <h1>Baccalauréat - 2017</h1>
-          <p>Lycée de Grand-Dakar</p>
-          <p>Décrivez cette formation en une ligne</p>
-        </section>
-      </section>
+      <app-experiences></app-experiences>
+      <app-formations></app-formations>
     </div>
   </main>
 </div>
